@@ -14,7 +14,6 @@ const UpcomingMarathon = () => {
     const { data } = await axiosSecure.get(`/marathonForHome`);
     setMarathons(data);
   };
-  console.log(marathons);
   return (
     <section className="p-10 bg-gray-100 text-center">
       <h2 className="text-3xl font-bold py-7">Upcoming Marathons</h2>

@@ -24,18 +24,15 @@ const MyApplyList = () => {
     )
     setMyApply(data);
   };
-  console.log(myApply);
   
   const handleDelete = async (id) => {
     try {
       const { data } = await axios.delete(
         `${import.meta.env.VITE_API_URL}/myApplyDel/${id}`
       );
-      console.log(data);
       toast.success("Data Deleted Successfully!!!");
       fetchMyApplyList();
     } catch (err) {
-      console.log(err);
       toast.error(err.message);
     }
   };

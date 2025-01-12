@@ -11,9 +11,7 @@ const UpdateApply = () => {
   const { user } = useContext(AuthContext);
   const [startDate, setStartDate] = useState(new Date());
   const { id } = useParams();
-  console.log(id);
   const [apply, setMyApply] = useState({});
-  console.log(apply);
   useEffect(() => {
     fetchMyApplyList();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -24,7 +22,6 @@ const UpdateApply = () => {
     );
     setMyApply(data);
   };
-  console.log(apply.contactNumber);
   //   {
   //     "_id": "6780ba4cb8eef94d333e4c8c",
   //     "email": "wwwww@gg.com",
@@ -77,8 +74,6 @@ const UpdateApply = () => {
       marathonId,
       buyer,
     };
-    console.log(myApplyData);
-    console.log(user);
     try {
       // 1. make a post request
       const { data } = await axios.put(
@@ -89,7 +84,6 @@ const UpdateApply = () => {
       form.reset()
       // 3. Show toast and navigate
       toast.success("My Marathon add Successful!!!");
-      console.log(data);
       navigate('/dashboard/myApplyList')
 
       //   if (response.ok) {

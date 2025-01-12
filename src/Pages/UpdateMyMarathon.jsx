@@ -43,7 +43,6 @@ const UpdateMyMarathon = () => {
     // const max_price = parseFloat(form.max_price.value)
     const photo = form.imageUrl.value;
     const description = form.description.value;
-    console.log(title, email);
     const formData = {
       title,
       buyer: {
@@ -72,11 +71,9 @@ const UpdateMyMarathon = () => {
       toast.success("Data Updated Successfully!!!");
       navigate("/dashboard/myMarathonList");
     } catch (err) {
-      console.log(err);
       toast.error(err.message);
     }
   };
-  console.log(job?.location);
   return (
     <div className="flex justify-center items-center my-12 w-full ">
       <HelmetProvider>

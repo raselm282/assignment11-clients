@@ -29,7 +29,6 @@ const AddMarathons = () => {
     // const max_price = parseFloat(form.max_price.value)
     const photo = form.imageUrl.value
     const description = form.description.value
-    console.log(title,email);
     const formData = {
       title,
       buyer: {
@@ -46,22 +45,19 @@ const AddMarathons = () => {
       mara_count: 0,
     }
     // const {data} = await axios.post(`${import.meta.env.VITE_API_URL}/add-mara`, formData)
-    // console.log(data);
+    // cons(data);
     try {
       // 1. make a post request
       await axios.post(`${import.meta.env.VITE_API_URL}/add-mara`, formData)
-      // console.log(data);
       // 2. Reset form
       form.reset()
       // 3. Show toast and navigate
       toast.success('Marathon Added Successfully!!!')
       navigate('/dashboard/myMarathonList')
     } catch (err) {
-      console.log(err)
       toast.error(err.message)
     }
   }
-  // console.log(data);
   return (
     <div className="flex justify-center items-center my-12 w-full ">
             <HelmetProvider>

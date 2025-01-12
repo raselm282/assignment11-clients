@@ -15,7 +15,6 @@ const MarathonForHome = () => {
     const { data } = await axiosSecure.get(`/marathonForHome`);
     setMarathons(data);
   };
-  console.log(marathons);
   return (
     <div>
       <div className="flex justify-between items-center">

@@ -9,7 +9,6 @@ import { HelmetProvider,Helmet } from 'react-helmet-async';
 const MyMarathonList = () => {
   const navigate = useNavigate()
     const { user } = useContext(AuthContext)
-      console.log(user?.email);
   const [jobs, setJobs] = useState([])
   useEffect(() => {
     fetchAllJobs()
@@ -21,7 +20,6 @@ const MyMarathonList = () => {
     )
     setJobs(data)
   }
-  console.log(jobs);
 //   const {
 //     title,
 //     buyer,
@@ -40,11 +38,9 @@ const handleDelete = async id => {
       const { data } = await axios.delete(
         `${import.meta.env.VITE_API_URL}/marathon/${id}`
       )
-      console.log(data)
       toast.success('Data Deleted Successfully!!!')
       fetchAllJobs()
     } catch (err) {
-      console.log(err)
       toast.error(err.message)
     }
   }

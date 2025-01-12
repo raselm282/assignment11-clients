@@ -18,7 +18,6 @@ const Marathons = () => {
     );
     setMarathons(data);
   };
-  console.log(marathons);
   return (
     <div>
       <HelmetProvider>

@@ -9,10 +9,8 @@ const Navbar = () => {
     signOutUser()
     .then(()=>{
         alert('success');
-        console.log('success');
     })
     .catch(error =>{
-        console.log(error.message);
     }
     )
 }
@@ -23,7 +21,6 @@ const Navbar = () => {
     {user && <><li><NavLink to={'/dashboard'}>Dashboard</NavLink></li></>}
     
     </>
-    console.log(user);
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">

@@ -17,9 +17,7 @@ const MarathonsDetails = () => {
   const { user } = useContext(AuthContext);
   const [startDate, setStartDate] = useState(new Date());
   const { id } = useParams();
-  console.log(id);
   const [job, setJob] = useState({});
-  console.log(job);
   useEffect(() => {
     fetchJobData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -45,7 +43,6 @@ const MarathonsDetails = () => {
     mara_count,
     _id
   } = job || {};
-  console.log(job);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -71,8 +68,6 @@ const MarathonsDetails = () => {
       marathonId,
       buyer : buyer?.email
     };
-    console.log(marathonData);
-    console.log(user);
     try {
       // 1. make a post request
       const { data } = await axios.post(
@@ -83,7 +78,6 @@ const MarathonsDetails = () => {
       form.reset()
       // 3. Show toast and navigate
       toast.success('My Marathon add Successful!!!')
-      console.log(data)
       navigate('/dashboard/myApplyList')
 
       //   if (response.ok) {
