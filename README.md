@@ -30,10 +30,21 @@ A **full-featured marathon event management system** that allows event organizer
 ✅ **Subscription Model:** Premium subscription for exclusive features  
 ✅ **Responsive Design:** Fully mobile-friendly  
 
+## 📫 Contact
+If you have any questions, feel free to reach out:
+
+📧 **Email:** raselm282@gmail.com
+
+🔗 **Facebook:** [Your Facebook Profile](https://www.facebook.com/share/18pGK5wFpC/)
+
+## 📦 Install Dependencies  
+
+npm install
+
 ## 📦 Installation & Setup  
 Follow these steps to run the project locally:  
 
 1️⃣ **Clone the Repository**  
 ```bash
 git clone https://github.com/raselm282/assignment11-clients.git
-cd marathon-management-system
+
