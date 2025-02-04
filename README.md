@@ -12,7 +12,7 @@ A **full-featured marathon event management system** that allows event organizer
 🔗 [marathon event management system](https://assignment11-clients.web.app)  
 
 ## 📸 Screenshot  
-![Marathon Management System](Your-Screenshot-Link-Here)
+![Marathon Management System](https://i.ibb.co.com/7trLrYxv/Screenshot-github.png)
 
 ## 🛠 Tech Stack  
 - **Frontend:** React.js, Tailwind CSS  
@@ -35,5 +35,5 @@ Follow these steps to run the project locally:
 
 1️⃣ **Clone the Repository**  
 ```bash
-git clone https://github.com/your-username/marathon-management-system.git
+git clone https://github.com/raselm282/assignment11-clients.git
 cd marathon-management-system
