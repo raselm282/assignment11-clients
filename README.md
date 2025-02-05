@@ -79,7 +79,7 @@ Before you start, ensure you have the following installed:
 
 📥 Step 1: Clone the Repository
 Open a terminal and run:<br>
-git clone https://github.com/raselm282/newspaper-full-stack-12.git
+git clone https://github.com/raselm282/assignment11-clients.git
 cd newspaper-full-stack-12
 
 
