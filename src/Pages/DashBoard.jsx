@@ -10,8 +10,8 @@ const DashBoard = () => {
             <title>Dashboard</title>
             </Helmet>
         </HelmetProvider>            
-            <div className='w-[20%]'>
-                <ul className="menu bg-base-200 rounded-box w-56">
+            <div className='w-[20%] dark:bg-gray-900 dark:text-white/60'>
+                <ul className="menu bg-base-200 rounded-box w-56 dark:bg-gray-900 dark:text-white/60">
                     <li><NavLink to={'addMarathons'}>Add Marathons</NavLink></li>
                     <li><NavLink to={'myMarathonList'}>My Marathons List</NavLink></li>
                     <li><NavLink to={'myApplyList'}>My Apply List</NavLink></li>

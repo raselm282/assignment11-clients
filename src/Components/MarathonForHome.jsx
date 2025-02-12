@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAxiosSecure from "../Hooks/useAxiosSecure";
+import SectionTitle from "./SectionTitle";
 
 const MarathonForHome = () => {
   const axiosSecure = useAxiosSecure();
@@ -16,25 +17,28 @@ const MarathonForHome = () => {
     setMarathons(data);
   };
   return (
-    <div>
-      <div className="flex justify-between items-center">
+    <div className="pt-10">
+      {/* <div className="flex justify-between items-center">
         <div>
           <b>Total Marathons:</b> {marathons.length}pcs
         </div>
-      </div>
+      </div> */}
 
-      <div className="p-6">
-        <h1 className="text-2xl font-bold mb-6 text-center">All Marathons</h1>
+      <div>
+        <SectionTitle
+          heading="All Marathons"
+          // subHeading="*****"
+        ></SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {marathons.map((marathon, i) => (
             <div
               key={i}
-              className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-200"
+              className=" dark:bg-gray-900 dark:text-white/60 w-full h-[32rem] bg-white shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200"
             >
               <img
                 src={marathon.photo}
                 alt={marathon.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-60 object-cover"
               />
               <div className="p-4">
                 <h2 className="text-lg font-bold mb-2">{marathon.title}</h2>
@@ -63,7 +67,7 @@ const MarathonForHome = () => {
                 )}
                 <button
                   onClick={() => navigate(`/marathons/${marathon._id}`)}
-                  className="mt-3 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  className="mt-3 px-4 py-2 btn dark:bg-[#ff5722]/50 dark:text-white/60 dark:hover:bg-[#ec3c06]/50 bg-[#ff5722] hover:bg-[#ec3c06] text-white rounded-lg"
                 >
                   See Details
                 </button>

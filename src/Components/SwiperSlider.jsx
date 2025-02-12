@@ -17,13 +17,13 @@ import bg_img3 from '../assets/image/carousel_33.jpg'
 
 const SwiperSlider = () => {
     return (
-        <div className='container px-6 py-10 mx-auto'>
+        <div className='container mx-auto'>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 5000,
+          delay: 7000,
           disableOnInteraction: false,
         }}
         pagination={{

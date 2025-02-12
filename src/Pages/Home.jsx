@@ -11,7 +11,7 @@ const Home = () => {
     toast.success("Successfully toasted!");
   };
   return (
-    <div>
+    <div className="bg-blue-100  dark:bg-gray-900 dark:text-white">
       <HelmetProvider>
         <Helmet>
           <title>Home</title>

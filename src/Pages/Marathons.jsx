@@ -19,7 +19,7 @@ const Marathons = () => {
     setMarathons(data);
   };
   return (
-    <div>
+    <div className="dark:bg-gray-900 dark:text-white/60">
       <HelmetProvider>
         <Helmet>
           <title>Marathons</title>
@@ -32,7 +32,7 @@ const Marathons = () => {
               name='category'
               id='category'
               onChange={e => setSort(e.target.value)}
-              className='border p-4 rounded-md'
+              className='border p-4 rounded-md dark:bg-gray-900 dark:text-white/60'
               value={sort}
             >
               <option value=''>Sort By Created At</option>
@@ -76,12 +76,12 @@ const Marathons = () => {
           {marathons.map((marathon, i) => (
             <div
               key={i}
-              className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-200"
+              className=" dark:bg-gray-900 dark:text-white/60 bg-white shadow-md  w-full h-[32rem] overflow-hidden hover:shadow-lg transition-shadow duration-200"
             >
               <img
                 src={marathon.photo}
                 alt={marathon.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-60 object-cover"
               />
               <div className="p-4">
                 <h2 className="text-lg font-bold mb-2">{marathon.title}</h2>
@@ -106,7 +106,7 @@ const Marathons = () => {
                 </p>}
                 <button
                   onClick={() => navigate(`/marathons/${marathon._id}`)}
-                  className="mt-3 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  className="mt-3 px-4 py-2 dark:bg-[#ff5722]/50 dark:text-white/60 dark:hover:bg-[#ec3c06]/50 bg-[#ff5722] hover:bg-[#ec3c06] text-white rounded-lg transition-colors"
                 >
                   See Details
                 </button>

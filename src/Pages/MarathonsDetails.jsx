@@ -108,7 +108,7 @@ const MarathonsDetails = () => {
             </HelmetProvider>
       {/* Job Details */}
       
-      <div className="flex-1 p-4  bg-orange-50 rounded-md shadow-md md:min-h-[350px]">
+      <div className="flex-1 p-4 dark:bg-gray-900 dark:text-white/60  bg-orange-50 rounded-md shadow-md md:min-h-[350px]">
         <div className="flex items-center justify-between">
           {mara_start && (
             <span className="text-sm font-light text-gray-800 ">
@@ -122,7 +122,7 @@ const MarathonsDetails = () => {
 
         <div className="flex">
         <div>
-          <h1 className="mt-2 text-3xl font-semibold text-gray-800 ">
+          <h1 className="mt-2 text-3xl font-semibold text-gray-800 dark:text-white/60">
             {title}
           </h1>
 
@@ -157,22 +157,22 @@ const MarathonsDetails = () => {
         <div className="text-center py-7">
           <button
             onClick={() => navigate(`/marathons/${marathon._id}`)}
-            className="btn text-center mt-3 px-4 py-2 btn-warning text-black rounded-lg  transition-colors"
+            className="btn text-center mt-3 px-4 py-2 dark:bg-[#ff5722]/50 dark:text-white/60 dark:hover:bg-[#ec3c06]/50 bg-[#ff5722] hover:bg-[#ec3c06] text-black rounded-lg  transition-colors"
           >
             Register Now
           </button>
         </div>
       </div>
       {/* Place A Bid Form */}
-      <form className="bg-orange-50 px-4 rounded-md" onSubmit={handleSubmit}>
-        <div className="grid grid-cols-1 gap-6 mt-4">
-        <p className="text-2xl">
-          <strong>Marathon Title:</strong> {title} (Read Only)
+      <form className="bg-orange-50 px-4 rounded-md dark:bg-gray-900 dark:text-white/60" onSubmit={handleSubmit}>
+        <div className="grid grid-cols-1 gap-6 mt-4 ">
+        <p className="text-2xl bg-[#e4c4ba] px-4 border-l-8  dark:bg-gray-900 dark:text-white/60 border-[#ec3c06]">
+          <strong></strong> {title} (Read Only)
         </p>
-        <p>
-          <strong>Start Date:</strong>{" "}
+        <p className=" dark:text-white/60">
+          <span className="dark:text-white/60 font-bold">Start Date:</span>{" "}
           {mara_start && (
-            <span className="text-gray-800 ">
+            <span className="text-gray-800 dark:text-white/60">
               {format(new Date(mara_start), "P")}
             </span>
           )}
@@ -190,7 +190,7 @@ const MarathonsDetails = () => {
               type="email"
               value={user ? user.email : ""}
               readOnly
-              className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+              className="block w-full px-4 py-2 mt-2 text-gray-700 dark:bg-gray-900 dark:text-white/60 dark:bg-gray-900 dark:text-white/60 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
             />
           </div>
           <div>
@@ -205,7 +205,7 @@ const MarathonsDetails = () => {
               // value={user ? user.email : ""}
               // readOnly
               required
-              className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+              className="block w-full dark:bg-gray-900 dark:text-white/60 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
             />
           </div>
         </div>
@@ -222,7 +222,7 @@ const MarathonsDetails = () => {
               // value={user ? user.email : ""}
               // readOnly
               required
-              className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+              className="block w-full dark:bg-gray-900 dark:text-white/60 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
             />
           </div>
           <div>
@@ -237,7 +237,7 @@ const MarathonsDetails = () => {
               // value={user ? user.email : ""}
               // readOnly
               required
-              className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+              className="block w-full dark:bg-gray-900 dark:text-white/60 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
             />
           </div>
         </div>
@@ -246,7 +246,7 @@ const MarathonsDetails = () => {
             Additional Info
           </label>
           <textarea
-            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+            className="block w-full dark:bg-gray-900 dark:text-white/60 px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
             name="additionalInfo"
             id="additionalInfo"
           ></textarea>
@@ -260,7 +260,7 @@ const MarathonsDetails = () => {
         /> */}
         
         <div className="text-center py-5">
-        <button className="btn btn-warning w w-full" type="submit">Submit</button>
+        <button className="dark:bg-[#ff5722]/50 dark:text-white/60 dark:hover:bg-[#ec3c06]/50 btn bg-[#ff5722] hover:bg-[#ec3c06] w-full" type="submit">Submit</button>
         </div>
       </form>
     </div>
